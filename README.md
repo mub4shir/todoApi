@@ -32,12 +32,11 @@ This project is a simple Todo API built with Express.js and PostgreSQL, featurin
 ## Setup and Installation
 
 1. Clone the repository:
+
    ```
    git clone https://github.com/your-username/todo-api.git
    cd todo-api
    ```
-
-````
 
 2. Install dependencies:
 
@@ -225,18 +224,18 @@ Replace `your_db_user`, `your_db_password`, `your_jwt_secret`, `your_email@examp
      ```
 
 9. **Delete a Todo**:
-   - **Method**: DELETE
-   - **URL**: `http://localhost:3000/todos/:id`
+   - Method: DELETE
+   - URL: `http://localhost:3000/todos/:id`
 
 ## Version Control
 
 This project uses Git for version control. Below are some common git commands you might find useful:
 
-- Clone the repository:
+## Clone the repository:
 
-  ```
-  git clone https://github.com/your-username/todo-api.git
-  ```
+```
+git clone https://github.com/your-username/todo-api.git
+```
 
 - Check the status of your local repository:
 
@@ -257,6 +256,7 @@ This project uses Git for version control. Below are some common git commands yo
   ```
 
 - Push changes to the remote repository:
+
   ```
   git push origin master
   ```
@@ -264,8 +264,6 @@ This project uses Git for version control. Below are some common git commands yo
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
-## Complete Code
 
 ### Directory Structure
 
@@ -291,4 +289,3 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 ├── package.json
 ├── .env
 ```
-````
