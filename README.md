@@ -227,10 +227,6 @@ Replace `your_db_user`, `your_db_password`, `your_jwt_secret`, `your_email@examp
    - Method: DELETE
    - URL: `http://localhost:3000/todos/:id`
 
-## Version Control
-
-This project uses Git for version control. Below are some common git commands you might find useful:
-
 ## Clone the repository:
 
 ```
@@ -261,4 +257,11 @@ git clone https://github.com/mub4shir/todoApi.git
 ├── testDBConnection.js
 ├── package.json
 ├── .env
+```
+
+## Postman Documenter link:
+
+```
+https://documenter.getpostman.com/view/14909689/UVJWqKhr
+
 ```
