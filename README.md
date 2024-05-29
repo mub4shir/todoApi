@@ -234,36 +234,9 @@ This project uses Git for version control. Below are some common git commands yo
 ## Clone the repository:
 
 ```
-git clone https://github.com/your-username/todo-api.git
+git clone https://github.com/mub4shir/todoApi.git
+
 ```
-
-- Check the status of your local repository:
-
-  ```
-  git status
-  ```
-
-- Add changes to the staging area:
-
-  ```
-  git add .
-  ```
-
-- Commit changes:
-
-  ```
-  git commit -m "Your commit message"
-  ```
-
-- Push changes to the remote repository:
-
-  ```
-  git push origin master
-  ```
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ### Directory Structure
 
