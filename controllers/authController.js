@@ -19,7 +19,7 @@ const authController = {
         from: process.env.EMAIL,
         to: email,
         subject: "Login Link",
-        text: `Use this link to login: ${process.env.CLIENT_URL}/login?token=${token}`,
+        text: `Use this link to login: ${process.env.CLIENT_URL}auth/login?token=${token}`,
       };
 
       console.log(
