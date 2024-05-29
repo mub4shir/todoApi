@@ -8,10 +8,21 @@ const Todo = {
     );
     return result.rows[0];
   },
-  async findAll(userId) {
-    const result = await pool.query("SELECT * FROM todos WHERE user_id = $1", [
-      userId,
-    ]);
+  //   async findAll(userId) {
+  //     const result = await pool.query("SELECT * FROM todos WHERE user_id = $1", [
+  //       userId,
+  //     ]);
+  //     return result.rows;
+  //   },
+  async findAll({ userId, offset, limit, search, sortBy, order }) {
+    const query = `
+      SELECT * FROM todos
+      WHERE user_id = $1 AND (title ILIKE $2 OR description ILIKE $2)
+      ORDER BY ${sortBy} ${order}
+      LIMIT $3 OFFSET $4
+    `;
+    const values = [userId, `%${search}%`, limit, offset];
+    const result = await pool.query(query, values);
     return result.rows;
   },
   async findById(userId, todoId) {

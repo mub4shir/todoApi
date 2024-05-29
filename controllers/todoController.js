@@ -14,8 +14,25 @@ const todoController = {
 
   async getAll(req, res) {
     const { userId } = req;
+    const {
+      page = 1,
+      limit = 10,
+      search = "",
+      sortBy = "id",
+      order = "asc",
+    } = req.query;
+
+    const offset = (page - 1) * limit;
+
     try {
-      const todos = await Todo.findAll(userId);
+      const todos = await Todo.findAll({
+        userId,
+        offset,
+        limit,
+        search,
+        sortBy,
+        order,
+      });
       res.status(200).json(todos);
     } catch (error) {
       res.status(500).send(error.message);

@@ -203,8 +203,37 @@ Replace `your_db_user`, `your_db_password`, `your_jwt_secret`, `your_email@examp
 
 6. **Get All Todos**:
 
-   - **Method**: GET
-   - **URL**: `http://localhost:3000/todos`
+- **Endpoint**: `/todos`
+- **Method**: `GET`
+- **Description**: Get all todos for the authenticated user, with support for pagination, search, and sorting.
+- **Headers**:
+  - `Authorization`: Bearer `<JWT token>`
+- **Query Parameters**:
+  - `page` (optional): The page number (default: 1).
+  - `limit` (optional): The number of todos per page (default: 10).
+  - `search` (optional): Search term to filter todos by title or description.
+  - `sortBy` (optional): Field to sort by (default: "id").
+  - `order` (optional): Sort order, either "asc" or "desc" (default: "asc").
+
+#### Pagination
+
+- **Endpoint**: `/todos?page=2&limit=5`
+- **Description**: Get the second page with 5 todos per page.
+
+#### Search
+
+- **Endpoint**: `/todos?search=work`
+- **Description**: Get todos where the title or description contains "work".
+
+#### Sorting
+
+- **Endpoint**: `/todos?sortBy=title&order=desc`
+- **Description**: Get todos sorted by title in descending order.
+
+#### Combined
+
+- **Endpoint**: `/todos?page=1&limit=10&search=work&sortBy=title&order=asc`
+- **Description**: Get the first page with 10 todos per page, where the title or description contains "work", sorted by title in ascending order.
 
 7. **Get a Todo by ID**:
 
